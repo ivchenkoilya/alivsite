@@ -1,0 +1,121 @@
+/* =========================================================================
+   ALIV SPORT — Design tokens
+   Premium Industrial / Performance Luxury
+   Single source of truth for colour, type, space, radius, depth and motion.
+   ========================================================================= */
+:root {
+  /* ---- Colour: base palette (from brief) ---- */
+  --black-900: #0B0C0E;   /* deep black — page background */
+  --graphite-800: #141619;/* primary graphite — surfaces */
+  --graphite-700: #1A1D21;
+  --graphite-600: #22252A;/* secondary surfaces */
+  --graphite-500: #2C3036;
+  --graphite-400: #3A3F46;
+  --orange-500: #FF6A00;  /* brand orange */
+  --orange-400: #FF8124;
+  --orange-600: #E25E00;
+  --white: #FFFFFF;
+  --grey-300: #C9CBCF;
+  --grey-400: #A5A8AE;    /* secondary text */
+  --grey-500: #868A92;    /* tertiary text — 5.2:1 on --black-900 */
+
+  /* ---- Colour: semantic roles ---- */
+  --bg: var(--black-900);
+  --bg-raised: var(--graphite-800);
+  --surface-1: var(--graphite-800);
+  --surface-2: var(--graphite-600);
+  --surface-3: var(--graphite-500);
+  --surface-glass: rgba(20, 22, 25, .72);
+  --line: rgba(255, 255, 255, .08);
+  --line-strong: rgba(255, 255, 255, .16);
+  --line-accent: rgba(255, 106, 0, .55);
+
+  --text: var(--white);
+  --text-2: var(--grey-400);
+  --text-3: var(--grey-500);
+  --text-on-accent: #120800;
+
+  --accent: var(--orange-500);
+  --accent-hover: var(--orange-400);
+  --accent-press: var(--orange-600);
+  --accent-soft: rgba(255, 106, 0, .12);
+  --accent-glow: rgba(255, 106, 0, .35);
+
+  --success: #3DD68C;
+  --success-soft: rgba(61, 214, 140, .12);
+  --danger: #FF5A52;
+  --danger-soft: rgba(255, 90, 82, .12);
+
+  /* Light "studio" stage behind product cut-outs shot on white */
+  --stage-hi: #F4F4F5;
+  --stage-lo: #CDD0D4;
+
+  /* ---- Typography ---- */
+  --font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+  --font-brand: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* fluid scale (360px → 1440px) */
+  --fs-hero: clamp(2.5rem, 1.6rem + 4.2vw, 5.25rem);
+  --fs-h1: clamp(2.125rem, 1.55rem + 2.6vw, 3.75rem);
+  --fs-h2: clamp(1.625rem, 1.3rem + 1.45vw, 2.5rem);
+  --fs-h3: clamp(1.1875rem, 1.08rem + .5vw, 1.5rem);
+  --fs-h4: 1.0625rem;
+  --fs-lead: clamp(1.0625rem, 1rem + .3vw, 1.25rem);
+  --fs-body: 1rem;        /* 16px — never smaller for running text */
+  --fs-small: .9375rem;   /* 15px */
+  --fs-xs: .8125rem;      /* 13px — labels, meta only */
+
+  --lh-tight: 1.04;
+  --lh-head: 1.15;
+  --lh-body: 1.6;
+  --tracking-caps: .08em;
+
+  /* ---- Space (4px base) ---- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 20px;
+  --s-6: 24px; --s-7: 32px; --s-8: 40px; --s-9: 48px; --s-10: 64px;
+  --s-11: 80px; --s-12: 112px;
+  --section-y: clamp(56px, 4vw + 36px, 104px);
+
+  /* ---- Layout ---- */
+  --container: 1320px;
+  --container-wide: 1560px;
+  --gutter: clamp(16px, 3.4vw, 40px);
+  --header-h: 72px;
+
+  /* ---- Radius ---- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---- Depth ---- */
+  --shadow-1: 0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px rgba(0,0,0,.35);
+  --shadow-2: 0 1px 0 rgba(255,255,255,.05) inset, 0 24px 60px rgba(0,0,0,.55);
+  --shadow-accent: 0 10px 30px -8px var(--accent-glow);
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --t-fast: 160ms;
+  --t-base: 280ms;
+  --t-slow: 560ms;
+
+  --z-header: 50;
+  --z-sticky: 40;
+  --z-drawer: 80;
+  --z-modal: 90;
+  --z-toast: 100;
+}
+
+@media (min-width: 1024px) {
+  :root { --header-h: 84px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-base: 0ms; --t-slow: 0ms; }
+}

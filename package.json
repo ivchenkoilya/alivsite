@@ -1,0 +1,13 @@
+{
+  "name": "alivsport-redesign",
+  "private": true,
+  "scripts": {
+    "data": "node tools/build-data.js",
+    "build": "node tools/build.js",
+    "serve": "node tools/serve.js 5173",
+    "shots": "node tools/screenshots.js"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.1"
+  }
+}

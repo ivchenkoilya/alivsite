@@ -1,0 +1,257 @@
+<!--meta
+{"title": "ALIV SPORT — профессиональные тренажёры от производителя", "description": "Тренажёры для залов и дома, скамьи, стойки и силовые рамы от производителя ALIV SPORT (alivgym). Каталог с ценами, прайс-лист для B2B, сборка и доставка.", "page": "home", "canonical": "/", "data": ["products", "pricelist"], "scripts": ["plview", "home", "daily"], "preload": ["https://alivsport.inetsystems.ru/wp-content/uploads/2024/02/main-slide.jpg"]}
+-->
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__media" data-slot="home-hero" data-slot-mobile="home-hero-mobile">
+    <img data-parallax="0.12" src="https://alivsport.inetsystems.ru/wp-content/uploads/2024/02/main-slide.jpg" alt="Тренировка в зале ALIV SPORT" width="2560" height="1706" fetchpriority="high" decoding="async">
+  </div>
+  <div class="container container--wide hero__inner">
+    <div class="hero__content">
+      <p class="kicker reveal">Производитель спортивного оборудования</p>
+      <h1 class="h-hero hero__title" id="hero-title">Оборудование, созданное <span class="accent">для&nbsp;результата</span></h1>
+      <p class="lead hero__lead reveal" style="--i:2">Профессиональные тренажёры и спортивное оборудование российского производства — для коммерческих залов, студий и дома.</p>
+      <div class="hero__actions reveal" style="--i:3">
+        <a class="btn btn--primary btn--lg" href="catalog.html">Смотреть каталог <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn btn--outline btn--lg" href="#selector">Подобрать оборудование</a>
+      </div>
+    </div>
+    <section class="hero-showcase" data-hero-showcase aria-roledescription="карусель" aria-label="Тренажёры, которые можно заказать онлайн"></section>
+  </div>
+  <div class="container container--wide">
+    <dl class="hero-stats reveal" style="--i:4" data-hero-stats></dl>
+  </div>
+</section>
+
+<!-- Ticker: real model names, each a link -->
+<nav class="ticker" aria-label="Модели в каталоге"><div class="ticker__track" data-ticker></div></nav>
+
+<!-- 2. ADVANTAGES -->
+<section class="section adv" aria-labelledby="adv-title">
+  <div class="container adv__grid">
+    <div class="adv__intro">
+      <p class="kicker reveal">Почему ALIV SPORT</p>
+      <h2 class="h2 reveal" style="--i:1" id="adv-title">Производим сами — отвечаем за&nbsp;каждую деталь</h2>
+      <p class="lead reveal" style="--i:2">Компания AlivGym разрабатывает и выпускает тренажёры для залов и дома, шведские стенки, реабилитационное и уличное оборудование.</p>
+      <a class="link-arrow reveal" style="--i:3" href="about.html">О производстве <svg class="i"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <ol class="adv__list">
+      <li class="adv__item reveal"><span class="adv__num">01</span><div><h3 class="h3">Высокое качество материалов</h3><p>Силовые элементы — из стали с полировкой и хромированием. Мягкие элементы — плотный поролон и винилискожа.</p></div></li>
+      <li class="adv__item reveal" style="--i:1"><span class="adv__num">02</span><div><h3 class="h3">Надёжность конструкции</h3><p>Подвижные узлы на подшипниках качения дают плавный ход. Канавки блоков полируются — тросы меньше изнашиваются, оборудование работает тише.</p></div></li>
+      <li class="adv__item reveal" style="--i:2"><span class="adv__num">03</span><div><h3 class="h3">Технологичность производства</h3><p>Сварные конструкции, полированные швы, гальваническая обработка комплектующих и износостойкое порошковое покрытие.</p></div></li>
+      <li class="adv__item reveal" style="--i:3"><span class="adv__num">04</span><div><h3 class="h3">Цены производителя</h3><p>Без посредников. Для залов и партнёров — оптовые цены в открытом прайс-листе.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 2b. DAILY — a new set of real machines every day, inspect by dragging across the photo -->
+<section class="section daily" data-daily aria-labelledby="daily-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text">
+        <p class="kicker">Подборка на <span data-daily-date>сегодня</span></p>
+        <h2 class="h2" id="daily-title">Тренажёры дня</h2>
+        <p class="muted">Каждый день — новые модели из каталога. Проведите по фото, чтобы осмотреть тренажёр.</p>
+      </div>
+    </div>
+    <div class="daily__grid">
+      <div class="daily-viewer" data-daily-viewer tabindex="0" aria-label="Фото тренажёра: стрелки влево и вправо — смена ракурса"></div>
+      <div class="daily-side">
+        <div class="daily-info" data-daily-info aria-live="polite"></div>
+        <div class="daily-tabs" role="tablist" aria-label="Тренажёры дня" data-daily-tabs></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CATEGORIES -->
+<section class="section section--raised cats" aria-labelledby="cats-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text">
+        <h2 class="h2 slash reveal" id="cats-title">Категории оборудования</h2>
+      </div>
+      <a class="link-arrow reveal" href="catalog.html">Весь каталог <svg class="i"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="cats__bento" data-cats-bento></div>
+    <div class="cats__types reveal" data-cats-types aria-label="Типы оборудования"></div>
+  </div>
+</section>
+
+<!-- 4. READY TO ORDER -->
+<section class="section rail-section" aria-labelledby="rail-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text">
+        <h2 class="h2 slash reveal" id="rail-title">Можно заказать онлайн</h2>
+        <p class="muted reveal" style="--i:1">Модели с опубликованной ценой — добавьте в корзину и оформите заказ. Остальное — по запросу.</p>
+      </div>
+      <div class="rail-nav reveal">
+        <button class="round-btn" type="button" data-rail-prev aria-label="Назад"><svg class="i"><use href="#i-chevron-left"/></svg></button>
+        <button class="round-btn" type="button" data-rail-next aria-label="Вперёд"><svg class="i"><use href="#i-chevron-right"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="rail" data-rail tabindex="0" aria-label="Тренажёры с ценой"></div>
+</section>
+
+<!-- 5. SERIES -->
+<section class="section series" aria-labelledby="series-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text">
+        <p class="kicker reveal">Прайс-лист · <span data-series-total></span> позиций</p>
+        <h2 class="h2 reveal" style="--i:1" id="series-title">Серии оборудования</h2>
+      </div>
+      <a class="link-arrow reveal" href="price.html">Полный прайс-лист <svg class="i"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="series__wrap reveal">
+      <div class="series__tabs" role="tablist" aria-label="Серии" data-series-tabs></div>
+      <div class="series__panel" role="tabpanel" data-series-panel aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SELECTOR -->
+<section class="section section--raised selector" id="selector" aria-labelledby="selector-title">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text">
+        <p class="kicker reveal">Подбор за 30 секунд</p>
+        <h2 class="h2 reveal" style="--i:1" id="selector-title">Подберите оборудование под задачу</h2>
+      </div>
+    </div>
+    <div class="selector__grid">
+      <form class="selector__form panel panel--pad reveal" data-selector>
+        <fieldset class="selector__group">
+          <legend class="caps">1 · Где будет стоять</legend>
+          <div class="selector__opts">
+            <label class="opt"><input type="radio" name="purpose" value="" checked><span>Неважно</span></label>
+            <label class="opt"><input type="radio" name="purpose" value="gym"><span>Зал или студия</span></label>
+            <label class="opt"><input type="radio" name="purpose" value="home"><span>Дом</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="selector__group">
+          <legend class="caps">2 · Зона тренировки</legend>
+          <div class="selector__opts" data-selector-types></div>
+        </fieldset>
+        <fieldset class="selector__group">
+          <legend class="caps">3 · Бюджет на единицу</legend>
+          <div class="selector__opts">
+            <label class="opt"><input type="radio" name="budget" value="" checked><span>Любой</span></label>
+            <label class="opt"><input type="radio" name="budget" value="100000"><span>до 100 000 ₽</span></label>
+            <label class="opt"><input type="radio" name="budget" value="200000"><span>до 200 000 ₽</span></label>
+          </div>
+          <p class="form-note" style="margin-top:10px">Бюджет учитывает только модели с опубликованной ценой.</p>
+        </fieldset>
+      </form>
+      <div class="selector__result">
+        <div class="selector__summary reveal">
+          <p><span class="selector__count" data-selector-count>0</span> <span data-selector-word>моделей</span> подходит</p>
+          <a class="btn btn--primary" data-selector-link href="catalog.html">Показать в каталоге <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="product-grid selector__cards" data-selector-cards></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PRODUCTION -->
+<section class="section prod" aria-labelledby="prod-title">
+  <div class="container prod__grid">
+    <figure class="prod__media reveal reveal--scale">
+      <div class="media-slot prod__photo" data-slot="production-1" data-alt="Производство ALIV SPORT">
+        <img src="https://alivsport.inetsystems.ru/wp-content/uploads/2025/05/IMG_2005.webp" alt="Тренировка на скамье ALIV SPORT" loading="lazy" decoding="async" width="853" height="1280">
+      </div>
+      <figcaption class="prod__badge"><svg class="i i--lg"><use href="#i-factory"/></svg><span><b>Собственное производство</b><br>Конаково, Тверская область</span></figcaption>
+    </figure>
+    <div class="prod__content">
+      <p class="kicker reveal">Собственное производство</p>
+      <h2 class="h2 reveal" style="--i:1" id="prod-title">От металла до&nbsp;готового тренажёра</h2>
+      <p class="lead reveal" style="--i:2">Каждое изделие проходит одинаковый технологический маршрут — так мы добиваемся прочности и аккуратного внешнего вида.</p>
+      <ol class="route reveal" style="--i:3">
+        <li><span>01</span>Сварка несущих конструкций</li>
+        <li><span>02</span>Полировка сварочных швов</li>
+        <li><span>03</span>Хромирование деталей вращения и гальваника</li>
+        <li><span>04</span>Порошковое покрытие</li>
+        <li><span>05</span>Сборка узлов на подшипниках качения</li>
+      </ol>
+      <a class="btn btn--outline reveal" style="--i:4" href="about.html#process">Подробнее о производстве <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MATERIALS / SPECS -->
+<section class="section section--tight specs-band" aria-labelledby="specs-title">
+  <div class="container">
+    <h2 class="sr-only" id="specs-title">Материалы и конструкция</h2>
+    <div class="specs-band__grid">
+      <div class="spec-cell reveal"><p class="spec-cell__value">100×50×3<small>мм</small></p><p class="spec-cell__label">Профиль рамы жима ногами, гравитрона, тяги в яму</p></div>
+      <div class="spec-cell reveal" style="--i:1"><p class="spec-cell__value">Ø50<small>мм</small></p><p class="spec-cell__label">Посадочный диаметр под диски на тренажёрах со свободными весами</p></div>
+      <div class="spec-cell reveal" style="--i:2"><p class="spec-cell__value">600<small>кг</small></p><p class="spec-cell__label">Допустимая нагрузка жима ногами и силовых рам</p></div>
+      <div class="spec-cell reveal" style="--i:3"><p class="spec-cell__value">80×80×3<small>мм</small></p><p class="spec-cell__label">Профиль стоек силовых рам; органайзеры дисков — нержавеющая сталь</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. COMMERCIAL -->
+<section class="section b2b" aria-labelledby="b2b-title">
+  <div class="container">
+    <div class="b2b__card">
+      <span class="light-streak b2b__streak" aria-hidden="true"></span>
+      <div class="b2b__content">
+        <p class="kicker reveal">Для коммерческих залов</p>
+        <h2 class="h2 reveal" style="--i:1" id="b2b-title">Готовые решения для залов</h2>
+        <p class="lead reveal" style="--i:2">Запустим любой проект: от небольших корпоративных залов до крупных фитнес-клубов. Собственный склад позволяет сэкономить время, деньги и заказать всё необходимое в одном месте.</p>
+        <div class="b2b__actions reveal" style="--i:3">
+          <button class="btn btn--primary btn--lg" type="button" data-quote-open data-quote-title="Оснащение зала под ключ">Запросить КП <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></button>
+          <a class="btn btn--outline btn--lg" href="price.html">Оптовый прайс-лист</a>
+        </div>
+      </div>
+      <ul class="b2b__list">
+        <li class="reveal"><svg class="i i--lg"><use href="#i-file"/></svg><div><b>Оптовые и розничные цены</b><span>Открытый прайс-лист по всем сериям</span></div></li>
+        <li class="reveal" style="--i:1"><svg class="i i--lg"><use href="#i-box"/></svg><div><b>Собственный склад</b><span>Комплектация заказа в одном месте</span></div></li>
+        <li class="reveal" style="--i:2"><svg class="i i--lg"><use href="#i-truck"/></svg><div><b>Сборка и доставка</b><span>Организуем доставку и монтаж</span></div></li>
+        <li class="reveal" style="--i:3"><svg class="i i--lg"><use href="#i-headset"/></svg><div><b>Сервисная поддержка</b><span>Помощь после покупки</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10. REQUEST + CONTACTS -->
+<section class="section section--raised request" aria-labelledby="request-title">
+  <div class="container request__grid">
+    <div class="request__info">
+      <p class="kicker reveal">Связаться с нами</p>
+      <h2 class="h2 reveal" style="--i:1" id="request-title">Рассчитаем оснащение под ваш объект</h2>
+      <p class="lead reveal" style="--i:2">Оставьте заявку — менеджер уточнит задачу, подберёт оборудование и подготовит коммерческое предложение.</p>
+      <ul class="request__contacts reveal" style="--i:3">
+        <li><svg class="i"><use href="#i-phone"/></svg><div><a href="tel:+79520886886">+7 (952) 088-68-86</a><a href="tel:+74824245717">+7 (48242) 4-57-17</a></div></li>
+        <li><svg class="i"><use href="#i-mail"/></svg><a href="mailto:if-78@mail.ru">if-78@mail.ru</a></li>
+        <li><svg class="i"><use href="#i-clock"/></svg><span>Пн–Пт 8:00–17:00, Сб–Вс — выходные</span></li>
+      </ul>
+    </div>
+    <form class="form panel panel--pad reveal" data-form="home" novalidate>
+      <input type="hidden" name="subject" value="Заявка с главной страницы">
+      <div class="form-row form-row--2">
+        <div class="field">
+          <label class="field__label" for="h-name">Ваше имя <b>*</b></label>
+          <div class="field__control"><svg class="i"><use href="#i-user"/></svg><input class="input" id="h-name" name="name" autocomplete="name" required placeholder="Имя"></div>
+          <span class="field__error">Укажите имя</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="h-phone">Телефон <b>*</b></label>
+          <div class="field__control"><svg class="i"><use href="#i-phone"/></svg><input class="input" id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__" data-phone></div>
+          <span class="field__error">Проверьте номер телефона</span>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="h-msg">Задача</label>
+        <div class="field__control"><svg class="i"><use href="#i-message"/></svg><textarea class="textarea" id="h-msg" name="message" placeholder="Например: оснащение зала 150 м², нужны силовые рамы и грузоблочные тренажёры"></textarea></div>
+      </div>
+      <label class="checkbox"><input type="checkbox" name="consent" required> <span>Согласен на обработку персональных данных для ответа на заявку</span></label>
+      <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+      <button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="i"><use href="#i-send"/></svg>Отправить заявку</button>
+    </form>
+  </div>
+</section>

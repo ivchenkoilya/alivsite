@@ -1,0 +1,104 @@
+<!-- Mobile menu -->
+<div class="drawer" id="drawer-menu" data-drawer="menu" aria-hidden="true">
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Меню">
+    <div class="drawer__head">
+      <span class="logo logo--drawer"><!--logo--></span>
+      <button class="icon-btn" type="button" data-drawer-close aria-label="Закрыть меню"><svg class="i"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="drawer__body">
+      <nav class="mobile-nav" aria-label="Мобильная навигация">
+        <a href="catalog.html" data-nav="catalog">Каталог <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <div class="mobile-nav__sub" data-mobile-categories></div>
+        <a href="price.html" data-nav="price">Прайс-лист <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <a href="planner.html" data-nav="planner">Конструктор зала <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <a href="compare.html" data-nav="compare">Сравнение <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <a href="about.html" data-nav="about">О компании <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <a href="contacts.html" data-nav="contacts">Контакты <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        <a href="favorites.html" data-nav="favorites">Избранное <svg class="i"><use href="#i-arrow-right"/></svg></a>
+      </nav>
+      <div class="mobile-contacts">
+        <a href="tel:+79520886886"><svg class="i"><use href="#i-phone"/></svg>+7 (952) 088-68-86</a>
+        <a href="tel:+74824245717"><svg class="i"><use href="#i-phone"/></svg>+7 (48242) 4-57-17</a>
+        <a href="mailto:if-78@mail.ru"><svg class="i"><use href="#i-mail"/></svg>if-78@mail.ru</a>
+        <span class="muted small" style="display:flex;gap:12px"><svg class="i accent"><use href="#i-clock"/></svg>Пн–Пт 8:00–17:00, Сб–Вс выходные</span>
+      </div>
+    </div>
+    <div class="drawer__foot">
+      <button class="btn btn--primary btn--block" type="button" data-quote-open><svg class="i"><use href="#i-file"/></svg>Запросить КП</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<div class="drawer drawer--right" id="drawer-cart" data-drawer="cart" aria-hidden="true">
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="drawer__head">
+      <p class="drawer__title" id="cart-title">Корзина <span class="muted" data-cart-count-text></span></p>
+      <button class="icon-btn" type="button" data-drawer-close aria-label="Закрыть корзину"><svg class="i"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="drawer__body" data-cart-mini></div>
+    <div class="drawer__foot" data-cart-mini-foot></div>
+  </div>
+</div>
+
+<!-- Search -->
+<div class="search-overlay" data-search aria-hidden="true">
+  <div class="search-overlay__backdrop" data-search-close></div>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Поиск по каталогу">
+    <form class="search-box__field" action="catalog.html" role="search">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input type="search" name="q" placeholder="Название тренажёра или артикул…" autocomplete="off" aria-label="Поисковый запрос" aria-controls="search-results" data-search-input>
+      <button class="icon-btn" type="button" data-search-close aria-label="Закрыть поиск"><svg class="i"><use href="#i-close"/></svg></button>
+    </form>
+    <div class="search-results" id="search-results" role="listbox" data-search-results></div>
+  </div>
+</div>
+
+<!-- Quote / consultation request -->
+<div class="modal" data-modal="quote" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+    <div class="modal__head">
+      <div>
+        <p class="kicker" data-quote-kicker>Заявка</p>
+        <h2 class="h3" id="quote-title" style="margin-top:10px" data-quote-title>Запросить коммерческое предложение</h2>
+      </div>
+      <button class="icon-btn" type="button" data-modal-close aria-label="Закрыть"><svg class="i"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="modal__body">
+      <div data-quote-context></div>
+      <form class="form" data-form="quote" novalidate>
+        <input type="hidden" name="subject" value="Запрос КП">
+        <div class="field">
+          <label class="field__label" for="q-name">Ваше имя <b>*</b></label>
+          <div class="field__control"><svg class="i"><use href="#i-user"/></svg><input class="input" id="q-name" name="name" autocomplete="name" required placeholder="Как к вам обращаться"></div>
+          <span class="field__error">Укажите имя</span>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="field">
+            <label class="field__label" for="q-phone">Телефон <b>*</b></label>
+            <div class="field__control"><svg class="i"><use href="#i-phone"/></svg><input class="input" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__" data-phone></div>
+            <span class="field__error">Проверьте номер телефона</span>
+          </div>
+          <div class="field">
+            <label class="field__label" for="q-email">Эл. почта</label>
+            <div class="field__control"><svg class="i"><use href="#i-mail"/></svg><input class="input" id="q-email" name="email" type="email" autocomplete="email" placeholder="Необязательно"></div>
+            <span class="field__error">Проверьте адрес почты</span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field__label" for="q-msg">Комментарий</label>
+          <div class="field__control"><svg class="i"><use href="#i-message"/></svg><textarea class="textarea" id="q-msg" name="message" placeholder="Объект, количество, сроки, город доставки"></textarea></div>
+        </div>
+        <label class="checkbox"><input type="checkbox" name="consent" required> <span>Согласен на обработку персональных данных для ответа на заявку</span></label>
+        <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+        <button class="btn btn--primary btn--block btn--lg" type="submit"><svg class="i"><use href="#i-send"/></svg>Отправить заявку</button>
+        <p class="form-note">Менеджер свяжется с вами в рабочее время: Пн–Пт 8:00–17:00.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" data-toasts aria-live="polite"></div>

@@ -1,0 +1,28 @@
+<!--meta
+{"title": "Страница не найдена — ALIV SPORT", "description": "Страница не найдена. Перейдите в каталог тренажёров ALIV SPORT или воспользуйтесь поиском.", "page": "404", "data": ["products"], "scripts": ["notfound"]}
+-->
+<section class="nf" aria-labelledby="nf-title">
+  <span class="light-streak" aria-hidden="true"></span>
+  <div class="container nf__inner">
+    <p class="nf__code" aria-hidden="true">404</p>
+    <h1 class="h1 upper" id="nf-title">Страница не найдена</h1>
+    <p class="lead">Возможно, ссылка устарела или модель переехала в другой раздел. Найдите нужный тренажёр по названию или артикулу.</p>
+    <form class="nf__search" action="catalog.html" role="search">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input class="input" type="search" name="q" placeholder="Например, жим ногами или AL-214" aria-label="Поиск по каталогу">
+      <button class="btn btn--primary" type="submit">Найти</button>
+    </form>
+    <nav class="nf__links" aria-label="Разделы сайта">
+      <a class="chip" href="catalog.html">Каталог</a>
+      <a class="chip" href="price.html">Прайс-лист</a>
+      <a class="chip" href="about.html">О компании</a>
+      <a class="chip" href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</section>
+<section class="section section--raised" aria-labelledby="nf-pop">
+  <div class="container">
+    <div class="section-head"><h2 class="h2 slash" id="nf-pop">Можно заказать онлайн</h2><a class="link-arrow" href="catalog.html?priced=1">Все модели с ценой <svg class="i"><use href="#i-arrow-right"/></svg></a></div>
+    <div class="product-grid product-grid--4" data-nf-products></div>
+  </div>
+</section>

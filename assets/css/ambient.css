@@ -1,0 +1,36 @@
+/* =========================================================================
+   ALIV SPORT — ambient details (loaded on every page)
+   ========================================================================= */
+/* reading progress under the header */
+.read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--orange-600), var(--orange-400)); transform: scaleX(0); transform-origin: left; box-shadow: 0 0 10px var(--accent-glow); pointer-events: none; }
+
+/* back to top with a progress ring */
+.to-top { position: fixed; right: 18px; bottom: 18px; z-index: var(--z-sticky); width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: rgba(20,22,25,.92); border: 1px solid var(--line-strong); color: var(--text); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); opacity: 0; transform: translateY(14px); pointer-events: none; transition: opacity var(--t-base), transform var(--t-base) var(--ease-out), color var(--t-fast); }
+.to-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { color: var(--accent); }
+.to-top svg { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); transform: rotate(-90deg); }
+.to-top circle { fill: none; stroke: transparent; stroke-width: 2.2; }
+.to-top .to-top__val { stroke: var(--accent); stroke-linecap: round; stroke-dasharray: 0 100; }
+.to-top > .i { transform: rotate(180deg); width: 20px; height: 20px; }
+body.has-buybar .to-top, body.has-cmp-tray .to-top { bottom: 92px; }
+@media (max-width: 599px) { .to-top { width: 44px; height: 44px; right: 12px; } }
+
+/* editorial section numbers on the home page */
+body[data-page="home"] main { counter-reset: sec; }
+body[data-page="home"] main > section.section { counter-increment: sec; }
+body[data-page="home"] main > section.section::before {
+  content: counter(sec, decimal-leading-zero); position: absolute; right: var(--gutter); top: clamp(16px, 3vw, 40px); z-index: 0;
+  font: 700 clamp(4.5rem, 3rem + 6vw, 10rem)/.8 var(--font-display); letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.07); pointer-events: none;
+}
+body[data-page="home"] main > section.section > .container { position: relative; z-index: 1; }
+
+/* panels: a thin orange edge lights up on hover — a consistent "touch" response */
+.panel, .info-card, .mat-card, .contact-card, .daily-tab, .zone-btn { position: relative; }
+.info-card::after, .mat-card::after, .contact-card::after {
+  content: ""; position: absolute; left: 18px; right: 18px; top: -1px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transform: scaleX(.4); transition: opacity var(--t-base), transform var(--t-slow) var(--ease-out);
+}
+.info-card:hover::after, .mat-card:hover::after, .contact-card:hover::after { opacity: 1; transform: none; }
+.to-top { visibility: hidden; transition: opacity var(--t-base), transform var(--t-base) var(--ease-out), color var(--t-fast), visibility var(--t-base); }
+.to-top.is-on { visibility: visible; }

@@ -1,0 +1,99 @@
+<!--meta
+{"title": "Прайс-лист — оптовые и розничные цены | ALIV SPORT", "description": "Прайс-лист ALIV SPORT: оптовые и розничные цены на шведские стенки, турники, скамьи, стойки, грузоблочные и уличные тренажёры. Поиск по артикулу, выгрузка в Excel.", "page": "price", "canonical": "/prajs-list/", "data": ["products", "pricelist"], "scripts": ["plview", "price"], "styles": ["price"]}
+-->
+<section class="page-hero price-hero" data-mark="Price">
+  <div class="page-hero__media media-slot" data-slot="price-hero" aria-hidden="true"></div>
+  <span class="light-streak" aria-hidden="true"></span>
+  <div class="container page-hero__inner">
+    <nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li aria-current="page">Прайс-лист</li></ol></nav>
+    <h1 class="page-hero__title"><span class="slash">Прайс-лист</span></h1>
+    <p class="lead page-hero__lead">Оптовые и розничные цены на оборудование ALIV SPORT — для фитнес-клубов, залов, студий, дилеров и частных покупателей.</p>
+    <ul class="price-hero__facts" data-price-facts></ul>
+    <div class="price-hero__actions no-print">
+      <button class="btn btn--primary btn--lg" type="button" data-xlsx><svg class="i"><use href="#i-download"/></svg>Скачать XLSX</button>
+      <button class="btn btn--outline btn--lg" type="button" data-print><svg class="i"><use href="#i-printer"/></svg>Печать / PDF</button>
+      <button class="btn btn--outline btn--lg" type="button" data-quote-open data-quote-title="Консультация по прайс-листу"><svg class="i"><use href="#i-headset"/></svg>Консультация</button>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight pl-section" aria-labelledby="pl-title">
+  <div class="container">
+    <div class="pl-head">
+      <h2 class="h2" id="pl-title" data-pl-title>Прайс-лист</h2>
+      <p class="muted small" data-pl-source></p>
+    </div>
+
+    <div class="series-chips no-print" role="group" aria-label="Серии" data-series-chips></div>
+
+    <div class="pl-tools no-print">
+      <div class="toolbar__search">
+        <svg class="i"><use href="#i-search"/></svg>
+        <input class="input" type="search" placeholder="Поиск по коду или названию — например, AL-202 или «скамья»" aria-label="Поиск по прайс-листу" data-pl-q>
+      </div>
+      <label class="toolbar__sort">
+        <span class="sr-only">Сортировка</span>
+        <svg class="i"><use href="#i-sort"/></svg>
+        <select class="select" data-pl-sort>
+          <option value="code">По артикулу</option>
+          <option value="price-asc">Розница: дешевле</option>
+          <option value="price-desc">Розница: дороже</option>
+          <option value="name">По названию</option>
+        </select>
+      </label>
+      <label class="checkbox pl-new"><input type="checkbox" data-pl-new><span>Только новинки</span></label>
+    </div>
+    <p class="pl-found" aria-live="polite" data-pl-found></p>
+
+    <div class="pl-table-wrap">
+      <table class="pl-table" data-pl-table>
+        <caption class="sr-only">Прайс-лист ALIV SPORT: код, наименование, оптовая и розничная цена в рублях</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="pl-sel no-print"><span class="sr-only">Выбрать</span></th>
+            <th scope="col">Код</th>
+            <th scope="col">Наименование</th>
+            <th scope="col" class="num">Опт, ₽</th>
+            <th scope="col" class="num">Розница, ₽</th>
+          </tr>
+        </thead>
+        <tbody data-pl-body></tbody>
+      </table>
+    </div>
+
+    <div class="pl-legend">
+      <span><b class="accent">Опт</b> — цена для дилеров и оптовых покупателей</span>
+      <span><b>Розница</b> — цена для частных покупателей</span>
+      <span>Цены в рублях. Позиции серий 500 и 700 — по запросу.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Selection bar -->
+<div class="sel-bar no-print" data-sel-bar aria-live="polite">
+  <div class="container sel-bar__inner">
+    <p><b data-sel-count>0</b> <span data-sel-word>позиций</span> выбрано · розница <b data-sel-sum>0 ₽</b></p>
+    <div class="sel-bar__actions">
+      <button class="btn btn--ghost btn--sm" type="button" data-sel-clear>Очистить</button>
+      <button class="btn btn--primary" type="button" data-sel-quote><svg class="i"><use href="#i-file"/></svg>Запросить КП</button>
+    </div>
+  </div>
+</div>
+
+<section class="section price-b2b no-print" aria-labelledby="b2b-title">
+  <div class="container">
+    <div class="kp-card">
+      <div class="kp-card__visual media-slot" data-slot="cta-band" aria-hidden="true"><span class="light-streak" style="left:40%"></span></div>
+      <div class="kp-card__body">
+        <h2 class="h2 upper" id="b2b-title">Получите коммерческое предложение</h2>
+        <p class="lead">Индивидуальные условия, подбор оборудования и расчёт проекта под ваш объект. Отметьте позиции в таблице — они попадут в заявку.</p>
+        <button class="btn btn--primary btn--lg" type="button" data-sel-quote><svg class="i"><use href="#i-file"/></svg>Запросить КП <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+    <div class="feature-strip" style="--cols:3; margin-top:20px">
+      <div><svg class="i"><use href="#i-handshake"/></svg><p><b>Для фитнес-клубов, залов и студий</b><span>Комплексное оснащение</span></p></div>
+      <div><svg class="i"><use href="#i-building"/></svg><p><b>Для организаций и учреждений</b><span>Спортзалы, реабилитация, улица</span></p></div>
+      <div><svg class="i"><use href="#i-box"/></svg><p><b>Для дилеров и партнёров</b><span>Оптовые цены</span></p></div>
+    </div>
+  </div>
+</section>

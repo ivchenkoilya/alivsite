@@ -1,0 +1,167 @@
+<!--meta
+{"title": "Тренажёр — ALIV SPORT", "description": "Профессиональный тренажёр ALIV SPORT от производителя: характеристики, цена, доставка.", "page": "product", "data": ["products"], "scripts": ["product", "reviews"], "styles": ["product"]}
+-->
+<div class="product-page" data-product-root>
+  <div class="container">
+    <nav class="pp-crumbs" aria-label="Хлебные крошки"><ol class="crumbs" data-pp-crumbs><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li></ol></nav>
+
+    <div class="pp-top">
+      <!-- Gallery -->
+      <section class="gallery" aria-label="Фотографии товара" data-gallery>
+        <div class="gallery__viewport">
+          <div class="gallery__track" data-gallery-track tabindex="0" aria-roledescription="карусель"></div>
+          <button class="round-btn gallery__nav gallery__nav--prev" type="button" data-gallery-prev aria-label="Предыдущее фото"><svg class="i"><use href="#i-chevron-left"/></svg></button>
+          <button class="round-btn gallery__nav gallery__nav--next" type="button" data-gallery-next aria-label="Следующее фото"><svg class="i"><use href="#i-chevron-right"/></svg></button>
+          <button class="round-btn gallery__expand" type="button" data-gallery-open aria-label="Открыть фото на весь экран"><svg class="i"><use href="#i-expand"/></svg></button>
+          <span class="gallery__counter" data-gallery-counter aria-hidden="true"></span>
+          <div class="gallery__dots" data-gallery-dots aria-hidden="true"></div>
+        </div>
+        <div class="thumbs" data-gallery-thumbs role="tablist" aria-label="Миниатюры"></div>
+      </section>
+
+      <!-- Buy box -->
+      <section class="buybox" aria-labelledby="pp-title">
+        <div class="buybox__tags" data-pp-tags></div>
+        <h1 class="buybox__title" id="pp-title" data-pp-title></h1>
+        <p class="buybox__lead" data-pp-lead></p>
+        <dl class="metrics" data-pp-metrics></dl>
+        <div class="buybox__price-row">
+          <div>
+            <p class="caps muted" data-pp-price-label>Цена</p>
+            <p class="buybox__price" data-pp-price></p>
+          </div>
+          <p class="buybox__note" data-pp-price-note></p>
+        </div>
+        <div class="buybox__actions" data-pp-actions></div>
+        <ul class="buybox__trust">
+          <li><svg class="i"><use href="#i-factory"/></svg><span>Собственное производство</span></li>
+          <li><svg class="i"><use href="#i-truck"/></svg><span>Сборка и доставка</span></li>
+          <li><svg class="i"><use href="#i-headset"/></svg><span>Сервисная поддержка</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <nav class="pp-tabs" aria-label="Разделы товара" data-pp-tabs>
+    <div class="container pp-tabs__inner">
+      <a href="#about" class="is-active">Описание</a>
+      <a href="#specs">Характеристики</a>
+      <a href="#delivery">Доставка и оплата</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#related">Похожие</a>
+    </div>
+  </nav>
+
+  <section class="section pp-section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <h2 class="h2 slash" id="about-title">Описание</h2>
+      <div class="pp-desc" data-pp-desc></div>
+    </div>
+  </section>
+
+  <section class="section section--raised pp-section" id="specs" aria-labelledby="specs-title">
+    <div class="container pp-specs">
+      <div>
+        <h2 class="h2 slash" id="specs-title">Характеристики</h2>
+        <p class="muted" style="margin-top:12px" data-pp-specs-note>Данные производителя. Уточнить параметры под ваш объект можно у менеджера.</p>
+      </div>
+      <div class="pp-specs__body" data-pp-specs></div>
+    </div>
+  </section>
+
+  <section class="section pp-section" id="delivery" aria-labelledby="delivery-title">
+    <div class="container">
+      <h2 class="h2 slash" id="delivery-title">Доставка и оплата</h2>
+      <div class="info-cards">
+        <article class="info-card"><svg class="i i--xl"><use href="#i-truck"/></svg><h3 class="h4">Сборка и доставка</h3><p>Организуем доставку и сборку оборудования. Стоимость и сроки зависят от города и объёма заказа — менеджер рассчитает их при подтверждении.</p></article>
+        <article class="info-card"><svg class="i i--xl"><use href="#i-wallet"/></svg><h3 class="h4">Оплата</h3><p>Способ оплаты и условия согласуются с менеджером при подтверждении заказа. Для залов и организаций — коммерческое предложение.</p></article>
+        <article class="info-card"><svg class="i i--xl"><use href="#i-box"/></svg><h3 class="h4">Собственный склад</h3><p>Комплектуем заказ на одном складе — можно заказать всё оборудование для зала в одном месте.</p></article>
+        <article class="info-card"><svg class="i i--xl"><use href="#i-shield"/></svg><h3 class="h4">Гарантия качества</h3><p>Производитель предоставляет гарантию на качество и внешний вид изделий. Условия уточняйте у менеджера.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pp-section" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <h2 class="h2 slash" id="reviews-title">Отзывы</h2>
+      <div class="rv" data-reviews></div>
+    </div>
+  </section>
+
+  <section class="section section--raised pp-section" id="related" aria-labelledby="related-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2 slash" id="related-title">Похожие тренажёры</h2>
+        <a class="link-arrow" href="catalog.html" data-related-link>Смотреть все <svg class="i"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="product-grid product-grid--4" data-related></div>
+    </div>
+  </section>
+
+  <section class="recent" data-recent hidden aria-labelledby="recent-title">
+    <div class="container">
+      <div class="section-head"><h2 class="h3 slash" id="recent-title">Недавно смотрели</h2></div>
+      <div class="product-grid product-grid--4" data-recent-grid></div>
+    </div>
+  </section>
+
+  <section class="section pp-consult" aria-labelledby="consult-title">
+    <div class="container">
+      <div class="consult">
+        <div class="consult__text">
+          <p class="kicker">Консультация</p>
+          <h2 class="h2" id="consult-title">Поможем подобрать и рассчитать</h2>
+          <p class="lead">Расскажем о конструкции, подберём комплект под зал и подготовим коммерческое предложение.</p>
+          <a class="consult__phone" href="tel:+79520886886"><svg class="i"><use href="#i-phone"/></svg>+7 (952) 088-68-86</a>
+        </div>
+        <form class="form" data-form="consult" novalidate>
+          <div class="form-row form-row--2">
+            <div class="field">
+              <label class="field__label" for="c-name">Ваше имя <b>*</b></label>
+              <div class="field__control"><svg class="i"><use href="#i-user"/></svg><input class="input" id="c-name" name="name" autocomplete="name" required placeholder="Имя"></div>
+              <span class="field__error">Укажите имя</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="c-phone">Телефон <b>*</b></label>
+              <div class="field__control"><svg class="i"><use href="#i-phone"/></svg><input class="input" id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__" data-phone></div>
+              <span class="field__error">Проверьте номер телефона</span>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-msg">Вопрос</label>
+            <div class="field__control"><svg class="i"><use href="#i-message"/></svg><textarea class="textarea" id="c-msg" name="message" placeholder="Что важно уточнить?"></textarea></div>
+          </div>
+          <label class="checkbox"><input type="checkbox" name="consent" required> <span>Согласен на обработку персональных данных для ответа на заявку</span></label>
+          <div class="form-status" role="status" aria-live="polite" data-form-status></div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="i"><use href="#i-send"/></svg>Получить консультацию</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Sticky mobile buy bar -->
+<div class="buybar" data-buybar aria-hidden="true">
+  <div class="buybar__info"><span class="buybar__name" data-buybar-name></span><span class="buybar__price" data-buybar-price></span></div>
+  <div data-buybar-action></div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр фотографий">
+  <div class="lightbox__top">
+    <span data-lb-counter></span>
+    <div class="lb-tools">
+      <span class="lb-hint">Нажмите, чтобы приблизить · колёсико — масштаб · тяните — осмотр</span>
+      <button class="icon-btn" type="button" data-lb-zoom-out aria-label="Отдалить"><svg class="i"><use href="#i-minus"/></svg></button>
+      <span class="lb-zoom" data-lb-zoom-label aria-live="polite">100%</span>
+      <button class="icon-btn" type="button" data-lb-zoom-in aria-label="Приблизить"><svg class="i"><use href="#i-plus"/></svg></button>
+      <button class="icon-btn" type="button" data-lb-close aria-label="Закрыть"><svg class="i"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <div class="lightbox__stage" data-lb-stage>
+    <button class="round-btn lightbox__nav lightbox__nav--prev" type="button" data-lb-prev aria-label="Предыдущее фото"><svg class="i"><use href="#i-chevron-left"/></svg></button>
+    <img alt="" data-lb-img>
+    <button class="round-btn lightbox__nav lightbox__nav--next" type="button" data-lb-next aria-label="Следующее фото"><svg class="i"><use href="#i-chevron-right"/></svg></button>
+  </div>
+  <div class="lightbox__thumbs" data-lb-thumbs></div>
+</div>

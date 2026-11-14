@@ -1,0 +1,116 @@
+<!--meta
+{"title": "Каталог тренажёров — ALIV SPORT", "description": "Каталог профессионального оборудования ALIV SPORT: грузоблочные тренажёры, свободные веса, скамьи, стойки, силовые рамы. Фильтры, цены, заказ онлайн.", "page": "catalog", "canonical": "/shop/", "data": ["products"], "scripts": ["catalog"]}
+-->
+<section class="page-hero page-hero--catalog" data-mark="Catalog">
+  <div class="page-hero__media media-slot" data-slot="catalog-hero" aria-hidden="true"></div>
+  <span class="light-streak" aria-hidden="true"></span>
+  <div class="container page-hero__inner">
+    <nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li aria-current="page">Каталог</li></ol></nav>
+    <h1 class="page-hero__title"><span class="slash">Каталог</span></h1>
+    <p class="lead page-hero__lead">Профессиональное оборудование для тренажёрных залов, студий и дома — от производителя.</p>
+  </div>
+</section>
+
+<section class="catalog section--tight" aria-label="Товары">
+  <div class="container">
+    <div class="type-rail" data-type-rail role="group" aria-label="Тип оборудования"></div>
+
+    <div class="catalog__layout">
+      <aside class="filters" id="filters" data-filters aria-label="Фильтры">
+        <div class="filters__head">
+          <p class="drawer__title">Фильтры</p>
+          <button class="icon-btn filters__close" type="button" data-filters-close aria-label="Закрыть фильтры"><svg class="i"><use href="#i-close"/></svg></button>
+        </div>
+        <form class="filters__body" data-filter-form>
+          <fieldset class="f-group">
+            <legend class="f-group__title">Категория</legend>
+            <div class="f-group__list" data-f-cats></div>
+          </fieldset>
+          <fieldset class="f-group">
+            <legend class="f-group__title">Назначение</legend>
+            <div class="f-group__list">
+              <label class="checkbox"><input type="checkbox" name="purpose" value="gym"><span>Для залов и студий</span><span class="checkbox__count" data-count-purpose="gym"></span></label>
+              <label class="checkbox"><input type="checkbox" name="purpose" value="home"><span>Для дома</span><span class="checkbox__count" data-count-purpose="home"></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="f-group">
+            <legend class="f-group__title">Тип оборудования</legend>
+            <div class="f-group__list" data-f-types></div>
+          </fieldset>
+          <fieldset class="f-group">
+            <legend class="f-group__title">Цена, ₽</legend>
+            <label class="checkbox"><input type="checkbox" name="priced" value="1"><span>Только с ценой на сайте</span><span class="checkbox__count" data-count-priced></span></label>
+            <div class="f-price">
+              <label><span class="sr-only">Цена от</span><input class="input input--plain" type="number" inputmode="numeric" name="min" min="0" step="1000" placeholder="от" data-price-min></label>
+              <span aria-hidden="true">—</span>
+              <label><span class="sr-only">Цена до</span><input class="input input--plain" type="number" inputmode="numeric" name="max" min="0" step="1000" placeholder="до" data-price-max></label>
+            </div>
+            <p class="form-note">Диапазон цены применяется к моделям с опубликованной ценой.</p>
+          </fieldset>
+        </form>
+        <div class="filters__foot">
+          <button class="btn btn--outline" type="button" data-reset>Сбросить</button>
+          <button class="btn btn--primary" type="button" data-filters-close data-apply>Показать <span data-apply-count></span></button>
+        </div>
+      </aside>
+      <div class="filters-backdrop" data-filters-close></div>
+
+      <div class="catalog__main">
+        <div class="toolbar">
+          <div class="toolbar__search">
+            <svg class="i"><use href="#i-search"/></svg>
+            <input class="input" type="search" placeholder="Поиск по названию или артикулу" aria-label="Поиск по каталогу" data-q>
+          </div>
+          <button class="btn btn--primary toolbar__filters" type="button" data-filters-open aria-controls="filters" aria-expanded="false"><svg class="i"><use href="#i-filter"/></svg>Фильтры <span class="toolbar__badge" data-filter-badge hidden></span></button>
+          <label class="toolbar__sort">
+            <span class="sr-only">Сортировка</span>
+            <svg class="i"><use href="#i-sort"/></svg>
+            <select class="select" data-sort>
+              <option value="default">Сначала новинки</option>
+              <option value="price-asc">Дешевле</option>
+              <option value="price-desc">Дороже</option>
+              <option value="name">По названию</option>
+            </select>
+          </label>
+        </div>
+        <div class="toolbar__meta">
+          <p class="toolbar__found" aria-live="polite"><span data-found>0</span></p>
+          <div class="active-chips" data-active-chips></div>
+          <div class="view-toggle" role="group" aria-label="Вид каталога">
+            <button class="icon-btn" type="button" data-view="grid" aria-pressed="true" aria-label="Плиткой"><svg class="i"><use href="#i-grid"/></svg></button>
+            <button class="icon-btn" type="button" data-view="list" aria-pressed="false" aria-label="Списком"><svg class="i"><use href="#i-list"/></svg></button>
+          </div>
+        </div>
+
+        <div class="product-grid catalog__grid" data-grid></div>
+        <div class="catalog__more">
+          <p class="muted small" data-shown></p>
+          <div class="progress" aria-hidden="true"><span data-progress></span></div>
+          <button class="btn btn--outline btn--lg" type="button" data-more>Показать ещё <svg class="i"><use href="#i-chevron-down"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent" data-recent hidden aria-labelledby="recent-title">
+  <div class="container">
+    <div class="section-head"><h2 class="h3 slash" id="recent-title">Недавно смотрели</h2></div>
+    <div class="product-grid product-grid--4" data-recent-grid></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band__bg media-slot" data-slot="cta-band" aria-hidden="true"></div>
+  <span class="light-streak" style="left:58%" aria-hidden="true"></span>
+  <div class="container cta-band__inner">
+    <div>
+      <h2 class="cta-band__title"><span class="slash">Комплексное оснащение залов</span></h2>
+      <p>Не нашли нужную модель? В прайс-листе более 200 позиций — от шведских стенок до уличных комплексов. Подберём и рассчитаем под ваш объект.</p>
+    </div>
+    <div class="cta-band__actions">
+      <button class="btn btn--primary btn--lg" type="button" data-quote-open data-quote-title="Оснащение зала">Оставить заявку <svg class="i i--arrow"><use href="#i-arrow-right"/></svg></button>
+      <a class="btn btn--outline btn--lg" href="price.html">Прайс-лист</a>
+    </div>
+  </div>
+</section>

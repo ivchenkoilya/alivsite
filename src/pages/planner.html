@@ -1,0 +1,106 @@
+<!--meta
+{"title": "Конструктор зала — расставьте тренажёры ALIV SPORT", "description": "Задайте размеры помещения и расставьте тренажёры ALIV SPORT по реальным габаритам: готовые зоны, замеры до стен, вид в перспективе, итоговая стоимость и план для менеджера.", "page": "planner", "data": ["products"], "scripts": ["planner"], "styles": ["planner"]}
+-->
+<section class="planner-intro">
+  <div class="container planner-intro__inner">
+    <nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li aria-current="page">Конструктор зала</li></ol></nav>
+    <div class="planner-intro__grid">
+      <div>
+        <p class="kicker">Планировка за 2 минуты</p>
+        <h1 class="page-hero__title">Соберите <span class="accent">свой зал</span></h1>
+        <p class="lead">Выберите помещение, добавьте готовые зоны или отдельные тренажёры — и посмотрите, как всё встанет. Размеры тренажёров — реальные, из характеристик производителя.</p>
+      </div>
+      <ol class="planner-steps" aria-label="Как это работает">
+        <li><b>1</b><span>Размер помещения</span></li>
+        <li><b>2</b><span>Зоны и тренажёры</span></li>
+        <li><b>3</b><span>Расстановка и замеры</span></li>
+        <li><b>4</b><span>План — менеджеру</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight planner" aria-label="Конструктор">
+  <div class="container planner__grid">
+    <aside class="planner__side">
+      <div class="panel planner__room">
+        <h2 class="h4"><span class="planner__n">1</span>Помещение</h2>
+        <div class="planner__presets" data-presets role="group" aria-label="Типовые помещения"></div>
+        <div class="planner__room-fields">
+          <label class="field"><span class="field__label">Длина, м</span><input class="input input--plain" type="number" min="2" max="60" step="0.1" value="10" data-room="L" inputmode="decimal"></label>
+          <label class="field"><span class="field__label">Ширина, м</span><input class="input input--plain" type="number" min="2" max="60" step="0.1" value="6" data-room="W" inputmode="decimal"></label>
+        </div>
+        <div class="planner__room-fields">
+          <label class="field"><span class="field__label">Зона подхода, м</span><input class="input input--plain" type="number" min="0" max="2" step="0.1" value="0.5" data-room="gap" inputmode="decimal"></label>
+          <label class="field"><span class="field__label">Вход</span>
+            <select class="select select--plain" data-door>
+              <option value="bottom">Снизу</option><option value="top">Сверху</option><option value="left">Слева</option><option value="right">Справа</option><option value="none">Не показывать</option>
+            </select>
+          </label>
+        </div>
+        <p class="form-note">Зона подхода — свободное место вокруг тренажёра для занятий и загрузки дисков; значение задаёте вы.</p>
+      </div>
+
+      <div class="panel planner__lib">
+        <h2 class="h4"><span class="planner__n">2</span>Зоны и тренажёры</h2>
+        <div class="planner__sets" data-sets></div>
+        <div class="planner__filters" data-lib-types role="group" aria-label="Тип"></div>
+        <div class="toolbar__search"><svg class="i"><use href="#i-search"/></svg><input class="input" type="search" placeholder="Найти модель" aria-label="Поиск тренажёра" data-lib-q></div>
+        <ul class="planner__list" data-lib></ul>
+        <p class="muted small" data-lib-count></p>
+      </div>
+    </aside>
+
+    <div class="planner__main">
+      <div class="planner__bar">
+        <div class="planner__gauge" data-gauge aria-hidden="true"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" pathLength="100"></circle><circle class="planner__gauge-val" cx="18" cy="18" r="15.9" pathLength="100" data-gauge-val></circle></svg><b data-gauge-txt>0%</b></div>
+        <div class="planner__stats" data-stats aria-live="polite"></div>
+        <div class="planner__view" role="group" aria-label="Вид">
+          <button class="chip is-active" type="button" data-view-mode="2d" aria-pressed="true">План</button>
+          <button class="chip" type="button" data-view-mode="3d" aria-pressed="false">Перспектива</button>
+        </div>
+      </div>
+
+      <div class="plan" data-plan tabindex="0" aria-label="План помещения. Выберите тренажёр: стрелки — перемещение, R — поворот, Delete — удалить.">
+        <div class="plan__stage" data-plan-stage>
+          <div class="plan__room" data-plan-room>
+            <span class="plan__dim plan__dim--x" data-dim-x></span>
+            <span class="plan__dim plan__dim--y" data-dim-y></span>
+            <span class="plan__door" data-door-mark><i></i>Вход</span>
+            <div class="plan__measures" data-measures aria-hidden="true"></div>
+            <div class="plan__empty" data-plan-empty>
+              <svg class="i i--xl"><use href="#i-grid"/></svg>
+              <p><b>Пустой зал</b><br>Добавьте готовую зону слева — или отдельный тренажёр кнопкой «+».</p>
+            </div>
+          </div>
+        </div>
+        <div class="plan__scale" data-scale aria-hidden="true"><i></i><span>1 м</span></div>
+        <div class="plan__hint" data-plan-hint>Тяните тренажёр мышью или пальцем · R — повернуть · Delete — убрать</div>
+      </div>
+
+      <div class="planner__sel" data-sel hidden>
+        <span class="stage planner__sel-img" data-sel-img></span>
+        <div class="planner__sel-info"><b data-sel-name></b><small data-sel-meta></small></div>
+        <div class="planner__sel-btns">
+          <button class="btn btn--outline btn--sm" type="button" data-sel-rotate><svg class="i"><use href="#i-route"/></svg>Повернуть</button>
+          <button class="btn btn--outline btn--sm" type="button" data-sel-dup><svg class="i"><use href="#i-copy"/></svg>Копия</button>
+          <a class="btn btn--ghost btn--sm" data-sel-open href="catalog.html">Карточка</a>
+          <button class="btn btn--ghost btn--sm" type="button" data-sel-del><svg class="i"><use href="#i-trash"/></svg>Убрать</button>
+        </div>
+      </div>
+
+      <div class="planner__summary panel">
+        <div class="planner__summary-head">
+          <h2 class="h4"><span class="planner__n">4</span>Состав зала</h2>
+          <div class="planner__summary-actions">
+            <button class="btn btn--ghost btn--sm" type="button" data-plan-clear><svg class="i"><use href="#i-trash"/></svg>Очистить</button>
+            <button class="btn btn--outline btn--sm" type="button" data-plan-png><svg class="i"><use href="#i-download"/></svg>Скачать план</button>
+            <button class="btn btn--primary btn--sm" type="button" data-plan-quote><svg class="i"><use href="#i-file"/></svg>Рассчитать этот зал</button>
+          </div>
+        </div>
+        <ul class="planner__bom" data-bom></ul>
+      </div>
+      <p class="form-note">Размеры основания — из характеристик производителя (длина × ширина). Модели без опубликованных размеров в конструктор не попадают — уточните их у менеджера. Планировка сохраняется на этом устройстве.</p>
+    </div>
+  </div>
+</section>
